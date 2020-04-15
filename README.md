@@ -1,2 +1,23 @@
 # Mongo-Data-Validation
 Build-in Validators, Custom Validators, Async Validators and validation errors
+
+* Callback custom validation approach
+```
+validate:{
+  isAsync: {
+    validator: function(v, callback){
+      setTimeout(() => {
+        const result = c && v.length > 0;
+        callback(result)
+      }, 4000)
+    }
+  }
+}
+```
+* The above approach is depreciated and promise should be used as shown below
+```
+validate: {
+ validator: (v) => Promise.resolve(v && v.length > 0),
+ message: "A course must have a tag.",
+},
+```    
