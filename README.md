@@ -35,3 +35,6 @@ mongoose
   .catch((err) => console.error("Could not connect to MondoDb..", err));
 
 ```
+
+* Here is the document structure in MongoDB Compass
+
