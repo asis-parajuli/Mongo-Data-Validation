@@ -37,4 +37,4 @@ mongoose
 ```
 
 * Here is the document structure in MongoDB Compass
-
+![Alt text](mongodb-compass-screenshot.png "Mongodb Compass")
