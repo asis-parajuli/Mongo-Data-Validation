@@ -21,3 +21,17 @@ validate: {
  message: "A course must have a tag.",
 },
 ```    
+
+* And connection to mongodb should use useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, as belows
+```
+mongoose
+  .connect("mongodb://localhost/playground", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+  })
+
+  .then(() => console.log("Connected to MondoDb..."))
+  .catch((err) => console.error("Could not connect to MondoDb..", err));
+
+```
